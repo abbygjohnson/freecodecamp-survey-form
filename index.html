@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <h1 id="title">Unicorn Survey Form</h1>
+    <p id="description">Thank you for taking the time to fill out our unicorn survey.</p>
+    <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+    
+      <label for="name" id="name-label" class="question">Your name:</label>
+      <input id="name" type="text" name="your-name" placeholder="Name" required />
+      
+      <label for="email" id="email-label" class="question">Your email:</label>
+      <input id="email" type="email" name="your-email" placeholder="Email" required />
+
+      <label for="unicorn-name" id="unicorn-name-label" class="question">Your unicorn's name:</label>
+      <input id="unicorn-name" type="text" name="unicorn-name" placeholder="Unicorn's name" required />
+
+      <label for="number" id="number-label" class="question">How old is your unicorn? Enter a number 0-100.</label>
+      <input id="number" type="number" min="0" max="100" name="unicorn-age" placeholder="Unicorn's age" required />
+
+      <label for="dropdown" class="question">Where did you find your unicorn?
+        <select id="dropdown" name="unicorn-origin" required>
+          <option value="" disabled selected>(Select one)</option>
+          <option value="1">Enchanted Forest</option>
+          <option value="2">The Shire</option>
+          <option value="3">Misty Mountains</option>
+        </select>
+      </label>
+    
+      <fieldset>
+        <legend class="question">What length is your unicorn's mane?</legend>
+          <label for="mane-short">
+            <input id="mane-short" type="radio" name="mane-length" value="short" checked /> Short
+          </label>
+          <label for="mane-medium">
+            <input id="mane-medium" type="radio" name="mane-length" value="medium" /> Medium
+          </label>
+          <label for="mane-long">
+            <input id="mane-long" type="radio" name="mane-length" value="long" /> Long
+          </label>
+      </fieldset>
+
+      <fieldset>
+        <legend class="question">What colors are your unicorn? Select all that apply.</legend>
+          <label for="color-pink">
+            <input id="color-pink" type="checkbox" name="colors" value="pink" /> Pink
+          </label>
+          <label for="color-purple">
+            <input id="color-purple" type="checkbox" name="colors" value="purple" /> Purple
+          </label>
+          <label for="color-blue">
+            <input id="color-blue" type="checkbox" name="colors" value="blue" /> Blue
+          </label>
+          <label for="color-green">
+            <input id="color-green" type="checkbox" name="colors" value="green" /> Green
+          </label>
+          <label for="color-gold">
+            <input id="color-gold" type="checkbox" name="colors" value="gold" /> Gold
+          </label>
+      </fieldset>
+      
+      <label for="activities" class="question">What are your unicorn's favorite activities?</label>
+      <textarea id="activities" name="activities" rows="5" cols="25" placeholder="Your unicorn's favorite activities"></textarea>
+      
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+  </body>
+</html>
